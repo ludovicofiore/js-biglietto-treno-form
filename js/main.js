@@ -11,7 +11,7 @@ const askKm = document.querySelector(".input-km");
 console.log(askKm);
 
 // selezione input età
-const askAge = document.querySelector(".input-age");
+let askAge = document.querySelector(".input-age");
 
 console.log(askAge);
 
@@ -37,11 +37,10 @@ myButton.addEventListener("click",
 
         // applicazione eventuali sconti
         let finalPrice;
-        let underAge = document.getElementById("minorenne");
-        let middleAge = document.getElementById("normale");
-        let overAge = document.getElementById("over65");
+        let underAge = document.querySelectorAll("input[value='minorenne']");
+        let overAge = document.querySelectorAll("input[value='over']");
 
-        console.log(underAge, overAge);
+        
 
         if (inputValueAge = underAge) { // se minorenne sconto 20%
 
