@@ -27,7 +27,6 @@ main {
 
 .data-container {
     width: 100%;
-    min-height: 500px;
     border: 2px solid black;
     border-radius: 20px;
     background-color: lightgray;
@@ -51,7 +50,25 @@ main {
 
 .input-button {
     display: inline-block;
-    width: 50px;
     padding: 10px;
     background-color: rgb(186, 20, 81);
+    margin-bottom: 20px;
+    color: white;
+}
+
+.ticket {
+    width: 80%;
+    border: 1px solid black;
+    background-color: white;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+#date-div {
+    width: 100%;
+    margin: 20px 0;
 }

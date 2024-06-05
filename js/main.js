@@ -5,6 +5,9 @@
 // - va applicato uno sconto del 40% per gli over 65.
 
 
+// selezione input nome
+const askName =document.querySelector(".input-name");
+
 // selezione input km da percorrere
 const askKm = document.querySelector(".input-km");
 
@@ -22,6 +25,12 @@ const myButton = document.querySelector(".input-button");
 
 myButton.addEventListener("click",
     function(){
+
+        // value nome cognome
+        let inputValueName = askName.value;
+
+        console.log(inputValueName);
+
         // value km
         let inputValueKm = parseInt(askKm.value);
 
@@ -39,8 +48,6 @@ myButton.addEventListener("click",
         let finalPrice;
         let underAge = document.querySelectorAll("input[value='minorenne']");
         let overAge = document.querySelectorAll("input[value='over']");
-
-        
 
         if (inputValueAge = underAge) { // se minorenne sconto 20%
 
@@ -60,8 +67,26 @@ myButton.addEventListener("click",
         let refinedPrice = finalPrice.toFixed(2);
         console.log(refinedPrice);
 
-        // output
+        // output prezzo
         document.getElementById("prezzo").innerHTML = refinedPrice;
+
+        // output nome cognome
+        document.getElementById("ticket-name").innerHTML = inputValueName;
+
+        // numero carrozza e output
+        let numeroCarrozza = Math.floor(Math.random() * 10);
+
+        document.getElementById("car-number").innerHTML = numeroCarrozza;
+
+        // codice cp e output
+        let CpCode = Math.floor(Math.random() * 10000);
+
+        document.getElementById("code-number").innerHTML = CpCode;
+
+        // data e output
+        let ticketDate = new Date();
+
+        document.getElementById("date").innerHTML = ticketDate;
     }
 )
 
