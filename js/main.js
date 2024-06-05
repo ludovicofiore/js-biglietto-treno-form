@@ -26,7 +26,7 @@ myButton.addEventListener("click",
         let inputValueKm = parseInt(askKm.value);
 
         // value age
-        let inputValueAge = parseInt(askAge.value);
+        let inputValueAge = askAge.value;
         
         console.log(inputValueKm, inputValueAge);
 
@@ -37,13 +37,18 @@ myButton.addEventListener("click",
 
         // applicazione eventuali sconti
         let finalPrice;
+        let underAge = document.getElementById("minorenne");
+        let middleAge = document.getElementById("normale");
+        let overAge = document.getElementById("over65");
 
-        if (inputValueAge < 18) { // se minorenne sconto 20%
+        console.log(underAge, overAge);
+
+        if (inputValueAge = underAge) { // se minorenne sconto 20%
 
             finalPrice = firstPrice - (firstPrice * 0.20);
             console.log(finalPrice);
         
-        } else if (inputValueAge > 65) { // se over 65 sconto 40%
+        } else if (inputValueAge = overAge) { // se over 65 sconto 40%
         
             finalPrice = firstPrice - (firstPrice * 0.40);
             console.log(finalPrice);
@@ -55,6 +60,9 @@ myButton.addEventListener("click",
         // aggiustamento prezzo a due decimali
         let refinedPrice = finalPrice.toFixed(2);
         console.log(refinedPrice);
+
+        // output
+        document.getElementById("prezzo").innerHTML = refinedPrice;
     }
 )
 
