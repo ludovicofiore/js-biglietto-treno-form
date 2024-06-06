@@ -40,21 +40,19 @@ myButton.addEventListener("click",
         console.log(inputValueKm, inputValueAge);
 
         // calcolo prezzo al km
-        let firstPrice = inputValueKm * 0.21
+        let firstPrice = inputValueKm * 0.21;
 
         console.log(firstPrice);
 
         // applicazione eventuali sconti
         let finalPrice;
-        let underAge = document.querySelectorAll("input[value='minorenne']");
-        let overAge = document.querySelectorAll("input[value='over']");
-
-        if (inputValueAge = underAge) { // se minorenne sconto 20%
+        
+        if (inputValueAge === "minorenne") { // se minorenne sconto 20%
 
             finalPrice = firstPrice - (firstPrice * 0.20);
             console.log(finalPrice);
         
-        } else if (inputValueAge = overAge) { // se over 65 sconto 40%
+        } else if (inputValueAge === "over") { // se over 65 sconto 40%
         
             finalPrice = firstPrice - (firstPrice * 0.40);
             console.log(finalPrice);
